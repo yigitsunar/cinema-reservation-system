@@ -1,0 +1,21 @@
+[33m9298ca7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m Final review and testing
+[33m008434b[m Refactor code and fix minor bugs
+[33mf47508e[m Add Javadoc comments to all classes
+[33m8a361a8[m Add CinemaServiceTest unit tests
+[33m4d49874[m Implement CinemaService cancelBooking method
+[33m027a66a[m Implement CinemaService bookSeat method
+[33m3e88aa9[m Add CustomerTest unit tests
+[33maf30cf7[m Add BookingTest unit tests
+[33m40709c3[m Add SeatTest unit tests
+[33ma6a6631[m Fix booking price calculation
+[33mc7c088e[m Add seat validation logic
+[33mf57603b[m Add MoviePriceTest
+[33mbb5623a[m Add Main class with user input
+[33me166ae9[m Add CinemaService skeleton
+[33m3dcb6a8[m Add Bookable interface
+[33meafd487[m Add ShowTime class
+[33maccbf93[m Add Booking class
+[33m24d54c1[m Add Customer and Seat classes
+[33m3da5f72[m Add Movie2D and Movie3D classes
+[33m1e11b55[m Add Movie base class
+[33m5789c1a[m Initial project setup
