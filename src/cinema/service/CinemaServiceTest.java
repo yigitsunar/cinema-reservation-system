@@ -1,5 +1,6 @@
 package cinema.service;
 
+
 import cinema.model.Seat;
 import cinema.model.Booking;
 import cinema.model.Customer;
@@ -8,6 +9,7 @@ import cinema.model.ShowTime;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
+
 
 public class CinemaServiceTest {
 
@@ -38,3 +40,4 @@ public class CinemaServiceTest {
         assertFalse(service.isSeatAvailable("A5"));
     }
 }
+//test başarılı
