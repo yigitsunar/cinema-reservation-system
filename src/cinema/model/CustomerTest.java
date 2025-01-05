@@ -1,12 +1,15 @@
 package cinema.model;
 
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
 
+
 public class CustomerTest {
 
     private Customer customer;
+
 
     @BeforeEach
     void setUp() {
@@ -39,3 +42,4 @@ public class CustomerTest {
         assertEquals("05551112233", customer.getPhone());
     }
 }
+//test başarılı
