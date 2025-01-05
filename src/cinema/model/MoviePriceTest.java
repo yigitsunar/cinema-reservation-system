@@ -1,9 +1,12 @@
 package cinema.model;
 
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+
 public class MoviePriceTest {
+
 
     @Test
     void test2DMoviePrice() {
@@ -17,3 +20,4 @@ public class MoviePriceTest {
         assertEquals(130.0, movie.calculatePrice());
     }
 }
+//test başarılı
