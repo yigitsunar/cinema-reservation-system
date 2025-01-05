@@ -23,6 +23,7 @@ public class BookingTest {
     void testBookingCreation() {
         Booking booking = new Booking(1, customer, showTime, seat);
 
+
         assertEquals(1, booking.getBookingId());
         assertEquals(customer, booking.getCustomer());
         assertEquals(showTime, booking.getShowTime());
@@ -39,6 +40,7 @@ public class BookingTest {
         assertFalse(seat.isAvailable());
     }
 
+
     @Test
     void testBookingWith3DMovie() {
         Movie3D movie3D = new Movie3D("Avatar", "Fantasy", 162, 120.0, 30.0);
@@ -49,3 +51,4 @@ public class BookingTest {
         assertEquals(150.0, booking.getPrice());
     }
 }
+//test başarılı
