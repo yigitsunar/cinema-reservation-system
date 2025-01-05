@@ -1,8 +1,10 @@
 package cinema.model;
 
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
+
 
 public class SeatTest {
 
@@ -36,3 +38,4 @@ public class SeatTest {
         assertTrue(seat.isAvailable());
     }
 }
+//test başarılı
