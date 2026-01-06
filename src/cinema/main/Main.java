@@ -60,7 +60,17 @@ public class Main {
         System.out.println("\nFilm Seçiniz:");
         System.out.println("1 - Inception (2D)");
         System.out.println("2 - Avatar (3D)");
-        int filmChoice = scanner.nextInt();
+        int filmChoice;
+        while (true) {
+            System.out.print("Seçiminiz (1-2): ");
+            if (scanner.hasNextInt()) {
+                filmChoice = scanner.nextInt();
+                if (filmChoice == 1 || filmChoice == 2) break;
+            } else {
+                scanner.next();
+            }
+            System.out.println("❌ Geçersiz seçim. Lütfen 1 veya 2 girin.");
+        }
 
         Movie selectedMovie = (filmChoice == 1)
                 ? new Movie2D("Inception", "Sci-Fi", 148, 100)
@@ -69,7 +79,17 @@ public class Main {
         System.out.println("\nSaat Seçiniz:");
         System.out.println("1 - 18:00");
         System.out.println("2 - 21:00");
-        int timeChoice = scanner.nextInt();
+        int timeChoice;
+        while (true) {
+            System.out.print("Seçiminiz (1-2): ");
+            if (scanner.hasNextInt()) {
+                timeChoice = scanner.nextInt();
+                if (timeChoice == 1 || timeChoice == 2) break;
+            } else {
+                scanner.next();
+            }
+            System.out.println("❌ Geçersiz seçim. Lütfen 1 veya 2 girin.");
+        }
 
         String time = (timeChoice == 1) ? "18:00" : "21:00";
         ShowTime showTime = new ShowTime(selectedMovie, "2025-01-01", time);
@@ -153,16 +173,31 @@ public class Main {
 
         reservedSeats.add(seat.getRow() + seat.getSeatNumber());
 
-        // ===== REZERVASYON =====
+        // ===== REZERVASYON ONAY =====
 
         Customer customer = new Customer(1, name, email, phone);
         Booking booking = new Booking(1, customer, showTime, seat);
 
-        System.out.println("\n✅ Rezervasyon Tamamlandı!");
+        System.out.println("\n📋 REZERVASYON ÖZETİ");
         System.out.println("Müşteri: " + customer.getName());
         System.out.println("Film: " + selectedMovie.getTitle());
         System.out.println("Saat: " + showTime.getTime());
         System.out.println("Koltuk: " + seat.getRow() + seat.getSeatNumber());
         System.out.println("Ücret: " + selectedMovie.calculatePrice() + " TL");
+
+        String confirmation;
+        while (true) {
+            System.out.print("\nRezervasyon onaylansın mı? (Y/N): ");
+            confirmation = scanner.nextLine().trim().toUpperCase();
+            if (confirmation.equals("Y") || confirmation.equals("N")) break;
+            System.out.println("❌ Lütfen Y veya N girin.");
+        }
+
+        if (confirmation.equals("Y")) {
+            System.out.println("\n✅ Rezervasyon Tamamlandı!");
+            System.out.println("İyi seyirler!");
+        } else {
+            System.out.println("\n❌ Rezervasyon iptal edildi.");
+        }
     }
 }
